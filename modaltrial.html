@@ -9,6 +9,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
     crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.6/sweetalert2.css">
     
 </head>
 <body>
@@ -31,25 +32,25 @@
 
     <script>
         document.getElementById("swale").addEventListener("click", function(){
-        //notify("This is a success message", "success")
-        notifyModal("title","<em> hello, world<em>", "success", "wsd")
-    })
-
-    function notify(msg,msgType){
-      notie.alert({
-        type: msgType,
-        text: msg,
-      })
-    }
-
-    function notifyModal(titlee,texte,icone,cbt){
-        swal.fire({
-            title: titlee,
-            html: texte,
-            icon: icone,
-            confirmButtonText: cbt
+            //notify("This is a success message", "success")
+            notifyModal()
         })
-    }
+
+        function notify(msg,msgType){
+            notie.alert({
+            type: msgType,
+            text: msg,
+            })
+        }
+
+        function notifyModal(){
+            swal.fire({
+                title: "title",
+                html: "<em> hello, world </em>",
+                icon: "success",
+                confirmButtonText: "wsd"
+            })
+        }
     </script>
 </body>
 </html>
